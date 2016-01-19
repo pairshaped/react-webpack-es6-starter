@@ -18,10 +18,6 @@ module.exports = {
       {
         exclude: /node_modules/,
         loader: 'babel'
-      },
-      {
-        test: /\.styl$/,
-        loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
       }
     ]
   },
