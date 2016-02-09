@@ -1,3 +1,5 @@
+var path = require('path')
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -11,18 +13,23 @@ module.exports = {
     preLoaders: [{
       // set up standard-loader as a preloader
       test: /\.jsx?$/,
-      loader: 'standard',
-      exclude: /(node_modules|bower_components)/
+      include: path.join(__dirname, 'src', 'scripts'),
+      loader: 'standard'
     }],
     loaders: [
       {
-        exclude: /node_modules/,
+        include: path.join(__dirname, 'src', 'scripts'),
         loader: 'babel'
+      },
+      {
+        test: /\.styl$/,
+        include: path.join(__dirname, 'src', 'styles'),
+        loader: 'style-loader!css-loader!stylus-loader'
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.styl']
   },
   devServer: {
     contentBase: './'
