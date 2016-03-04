@@ -19,3 +19,9 @@ Edit the package.json and add your project info.
 ```
 npm start
 ```
+
+## Compiling the bundle.js
+
+```
+npm run prod
+```
