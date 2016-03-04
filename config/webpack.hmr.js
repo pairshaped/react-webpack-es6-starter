@@ -19,7 +19,7 @@ module.exports = {
     preLoaders: [{
       // set up standard-loader as a preloader
       test: /\.jsx?$/,
-      include: path.join(__dirname, 'src', 'scripts'),
+      include: path.join(ROOT, 'src', 'scripts'),
       loader: 'standard'
     }],
 

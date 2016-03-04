@@ -1,14 +1,13 @@
 import React from 'react'
 
-import MyView from 'views/MyView'
+import MyComponent from 'components/MyComponent'
 
 const App = React.createClass({
   render: function () {
     return (
       <div>
-        App Loaded.  This should probably be a router?
-        <hr />
-        <MyView />
+        This is my app.
+        <MyComponent />
       </div>
     )
   }
