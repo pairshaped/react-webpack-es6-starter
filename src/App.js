@@ -1,17 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import MyView from 'views/MyView'
 
-class App extends Component {
-
-  constructor (props) {
-    super(props)
-
-    this.state = {
-    }
-  }
-
-  render () {
+const App = React.createClass({
+  render: function () {
     return (
       <div>
         App Loaded.  This should probably be a router?
@@ -20,7 +12,6 @@ class App extends Component {
       </div>
     )
   }
-
-}
+})
 
 export default App

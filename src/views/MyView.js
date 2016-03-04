@@ -1,14 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class MyView extends Component {
-
-  constructor (props) {
-    super(props)
-
-    this.state = {}
-  }
-
-  render () {
+const MyView = React.createClass({
+  render: function () {
     return (
       <div>
         This is my view.
@@ -16,7 +9,6 @@ class MyView extends Component {
       </div>
     )
   }
-
 }
 
 export default MyView
