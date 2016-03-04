@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
 
-class App extends Component {
+class MyView extends Component {
 
   constructor (props) {
     super(props)
 
-    this.state = {
-    }
+    this.state = {}
   }
 
   render () {
     return (
       <div>
-        App Loaded
+        This is my view.
+        Feel free to load up components here
       </div>
     )
   }
 
 }
 
-export default App
+export default MyView
