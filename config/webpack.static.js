@@ -1,14 +1,20 @@
-var path = require('path')
+Webpack = require('webpack')
+path = require('path')
+ROOT = path.join(__dirname, '..')
 
 module.exports = {
+  devtool: 'cheap-module-eval-source-map',
+
   entry: [
-    './src/index.js'
+    path.join(ROOT, 'src', 'index.js')
   ],
+
   output: {
-    path: __dirname,
+    path: path.join(ROOT, 'public'),
     publicPath: '/',
     filename: 'bundle.js'
   },
+
   module: {
     preLoaders: [{
       // set up standard-loader as a preloader
@@ -16,22 +22,26 @@ module.exports = {
       include: path.join(__dirname, 'src', 'scripts'),
       loader: 'standard'
     }],
+
     loaders: [
       {
-        include: path.join(__dirname, 'src', 'scripts'),
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel'
       },
+
       {
         test: /\.styl$/,
-        include: path.join(__dirname, 'src', 'styles'),
+        exclude: /node_modules/,
         loader: 'style-loader!css-loader!stylus-loader'
       }
     ]
   },
+
   resolve: {
-    extensions: ['', '.js', '.jsx', '.styl']
-  },
-  devServer: {
-    contentBase: './'
+    extensions: ['', '.js', '.jsx', '.styl'],
+    root: [
+      path.join(ROOT, 'src')
+    ]
   }
 };
