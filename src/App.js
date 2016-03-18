@@ -6,7 +6,7 @@ const App = React.createClass({
   render: function () {
     return (
       <div>
-        This is my app.
+        This is the app.
         <MyComponent />
       </div>
     )
