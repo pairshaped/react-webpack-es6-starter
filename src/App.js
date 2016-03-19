@@ -2,7 +2,7 @@ import React from 'react'
 
 import MyComponent from 'components/MyComponent'
 
-const App = React.createClass({
+export default React.createClass({
   render: function () {
     return (
       <div>
@@ -12,5 +12,3 @@ const App = React.createClass({
     )
   }
 })
-
-export default App

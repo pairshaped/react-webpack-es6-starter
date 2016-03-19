@@ -13,9 +13,14 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  stats: {
+    colors: true,
+    reasons: true,
+    chunks: false
+  },
+
   module: {
     preLoaders: [{
-      // set up standard-loader as a preloader
       test: /\.jsx?$/,
       include: path.join(__dirname, 'src'),
       loader: 'standard'
@@ -33,6 +38,10 @@ module.exports = {
         loader: 'style-loader!css-loader!stylus-loader'
       }
     ]
+  },
+
+  standard: {
+    parser: 'babel-eslint'
   },
 
   resolve: {

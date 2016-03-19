@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MyComponent = React.createClass({
+export default React.createClass({
   render: function () {
     return (
       <div>
@@ -9,5 +9,3 @@ const MyComponent = React.createClass({
     )
   }
 })
-
-export default MyComponent
