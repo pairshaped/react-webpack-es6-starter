@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "repository": "git@github.com:pairshaped/react-webpack-es6-starter.git",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.hmr.js --port 3000",
+    "start": "webpack-dev-server --config webpack.hot.js --port 3000",
     "build": "webpack --config webpack.static.js"
   },
   "author": "Dave Rapin",
@@ -26,6 +26,7 @@
     "standard": "^6.0.8",
     "standard-loader": "^3.0.0",
     "style-loader": "^0.13.1",
+    "stylus": "^0.54.2",
     "stylus-loader": "^2.0.0",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
