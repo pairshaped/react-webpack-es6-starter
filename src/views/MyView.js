@@ -9,6 +9,6 @@ const MyView = React.createClass({
       </div>
     )
   }
-}
+})
 
 export default MyView
